@@ -53,26 +53,12 @@ def delete(root,ele):
       root.right=delete(root.right,temp.ele)
    return root
 
-    
-   
-    
-    
-    
-
-
-
 def inorder(root):
     if root:
         inorder(root.left)
         print(root.ele)
         inorder(root.right)
 
-a=tree(11)
-for i in [5,15,3,13,4]:
-    insert(a,i)
-inorder(a)
-print()
-delete(a,15)
-inorder(a)
+
 
 
