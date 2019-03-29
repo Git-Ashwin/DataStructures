@@ -49,10 +49,6 @@ class minheap:
         self.buildheap(a)
         return ret
 
-a=minheap()
-a.buildheap([7,10,10,20,3,4,49,50,50])
-
-print(a.ls)
 
 
 
