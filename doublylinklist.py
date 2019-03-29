@@ -62,10 +62,8 @@ class dlinklist:
         if self.head==None:
             print('No Node')
         else:
-            while pos.next.next!=None:
-                pos=pos.next
-            self.tail=pos
-            pos.next=None
+           self.tail=self.tail.prev
+           self.tail.next=None
     def deletemid(self,ele):
         pos=self.head
         if pos.ele==ele:
@@ -83,7 +81,7 @@ class dlinklist:
         
         
         
-    def show(self,s='S'):
+    def travers(self,s='S'):
         if s=='S':
             pos=self.head
             while pos.next!=None:
@@ -105,4 +103,5 @@ a.insertbeg(3)
 a.insertend(11)
 a.insertmid(0,10)
 
-a.show(0)
+
+a.travers()
