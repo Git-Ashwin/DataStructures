@@ -20,11 +20,4 @@ class queue:
         return len(self.a)==0
     def qsize(self):
         return len(self.ls)
-a=queue(int(input('enter the no of elements....')))
-b=input('enter the elements......')
-b=b.split()
-for i in b:
-    a.enqueue(i)
-n=int(input('enter the another elements......'))
-a.enqueue(n)
-print(a.ls)
+
