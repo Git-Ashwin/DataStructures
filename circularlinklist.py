@@ -80,6 +80,7 @@ class circularlinklist:
             while pos.next.next!=self.head:
                 pos=pos.next
             pos.next=self.head
+#yeald----generator
     def traverse(self):
         pos=self.head
         while pos.next!=self.head:
