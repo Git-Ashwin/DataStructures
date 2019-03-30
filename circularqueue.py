@@ -37,7 +37,9 @@ class circularqueue:
             self.front=(self.front+1)%self.limit
             if self.front==self.limit:
                 self.front=self.rear=None
-b=int(input('enter the no players....'))
+
+
+'''b=int(input('enter the no players....'))
 
 c=1
 v=0
@@ -53,7 +55,7 @@ while not v:
   b1=a.ls[a.front]
   a.dequeue()
   print(b1)
-  v=a.isempty()
+  v=a.isempty()'''
   
 
 
