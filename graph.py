@@ -9,40 +9,39 @@ class graph:
         for i in self.graph.keys():
             visited[i]=False
         for i in self.graph.keys():
-            if not visited[i]:
+            if visited[i]==False:
                  print(i)
-            visited[i]=True
-            stack=self.graph[i][:]
-            while stack:
-                s=stack[-1]
-                for j in self.graph[s]:
+                 visited[i]=True
+                 stack=[]
+                 for j in self.graph[i]:
                     if visited[j]==False and j not in stack:
-                        visited[j]=True
                         stack.append(j)
-                        print(j)
-                        break
-                else:
-                    stack.pop()
+            while stack:
+                    s=stack.pop()
+                    for j in self.graph[s]:
+                       if visited[j]==False and j not in stack:
+                        stack.append(j)
+                    print(s)
+                    visited[s]=True
     def bfs(self):
         visited={}
         for i in self.graph.keys():
             visited[i]=False
         for i in self.graph.keys():
-            if not visited[i]:
-                 print(i)
-            visited[i]=True
-            queue=self.graph[i][:]
-            while queue:
-                s=queue[0]
-                for j in self.graph[s]:
-                    if visited[j]==False and j not in queue:
-                        visited[j]=True
-                        queue.append(j)
-                        print(j)
-                        break
-                else:
-                    queue.pop(0)
-                
+            if visited[i]==False:
+                print(i)
+                visited[i]=True
+                stack=[]
+                for j in self.graph[i]:
+                    if visited[j]==False and j not in stack:
+                        stack.append(j)
+                while stack:
+                    s=stack.pop(0)
+                    for j in self.graph[s]:
+                        if visited[j]==False and j not in stack:
+                                stack.append(j)
+                    print(s)
+                    visited[s]=True
                         
 
     
@@ -50,6 +49,9 @@ class graph:
 a=graph()
 a.addedge(1,2)
 a.addedge(2,1)
+a.addedge(1,5)
+a.addedge(1,10)
+a.addedge(10,1)
 a.addedge(4,5)
 a.addedge(5,4)
 a.addedge(3,1)
